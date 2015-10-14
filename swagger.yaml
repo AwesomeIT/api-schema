@@ -547,6 +547,9 @@ definitions:
   Error:
     type: object
     properties:
+      id: 
+        type: string
+        description: 'Unique ID for error message'
       message:
         type: string
         description: 'Details about the error encountered'
