@@ -553,9 +553,9 @@ definitions:
       message:
         type: string
         description: 'Details about the error encountered'
-      attempt:
+      path:
         type: string
-        description: 'URL of the resource requested which induced the error'
+        description: 'Request target at time of error'
       request:
         type: object
         description: 'The body of the request, if present'
