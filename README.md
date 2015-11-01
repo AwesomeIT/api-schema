@@ -8,7 +8,7 @@ To make edits, it is probably easier to read and make changes to `swagger.yaml`.
 
 ```bash
 bundle install
-rake generate:yaml
+rake generate:json
 ```
 
 `swagger.json` should automagically appear in the root of this repository. 

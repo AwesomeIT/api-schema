@@ -770,12 +770,12 @@
           "type": "string",
           "description": "The ID of the sample being scored"
         },
-        "score": {
+        "rating": {
           "type": "number",
           "format": "double",
           "maximum": 1,
           "minimum": 0,
-          "description": "The score of the sample, 1 indicating perfect English speech, 0 indicating indiscernable speech"
+          "description": "The rating of the sample, 1 indicating perfect English speech, 0 indicating indiscernable speech"
         }
       }
     },
