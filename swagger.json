@@ -5,7 +5,7 @@
     "description": "Provide for and analyze metrics on the quality of spoken English.",
     "version": "1.0.0",
     "contact": {
-      "name": "David Paulina",
+      "name": "David Stancu, Paulina Levit",
       "email": "dstancu@nyu.edu"
     },
     "license": {
@@ -742,20 +742,6 @@
             "type": "string"
           },
           "description": "The audio samples used for scoring"
-        },
-        "scores": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Scores submitted as part of this experiment, by ID"
-        },
-        "participants": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Participants of this experiment, by ID"
         }
       }
     },
@@ -769,6 +755,10 @@
         "sample_id": {
           "type": "string",
           "description": "The ID of the sample being scored"
+        },
+        "experiment_id": {
+          "type": "string",
+          "description": "The ID of the experiment the score belongs to"
         },
         "rating": {
           "type": "number",
