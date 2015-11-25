@@ -35,7 +35,7 @@
     "application/json"
   ],
   "paths": {
-    "/samples": {
+    "/sample": {
       "get": {
         "summary": "Retrieve samples",
         "description": "Retrieve a list of audio sample resources. By default, a limit of 10 samples are returned.\n",
@@ -78,7 +78,7 @@
         ]
       }
     },
-    "/samples/set": {
+    "/sample/set": {
       "post": {
         "summary": "Retrieve a set of audio samples",
         "description": "Retrieve a set of audio sample resources by ID. If a resource cannot be found, that resource will not be returned. Upon passing an empty array or an array with all invalid IDs, an empty set will be returned.\n",
@@ -127,7 +127,7 @@
         ]
       }
     },
-    "/samples/search": {
+    "/sample/search": {
       "get": {
         "summary": "Retrieve audio sample(s) by specified criterion.",
         "description": "Retrieve one or many audio samples by the specified search criterion. All matching resources will be returned, in the case of no matching resources, an empty set will be returned.\n",
@@ -186,7 +186,7 @@
         ]
       }
     },
-    "/samples/{id}": {
+    "/sample/{id}": {
       "get": {
         "summary": "Audio samples",
         "description": "Retrieve an audio sample by its ID\n",
@@ -323,7 +323,7 @@
         ]
       }
     },
-    "/samples/create": {
+    "/sample/create": {
       "post": {
         "summary": "Create audio samples",
         "description": "Create an audio sample. Returns ID of newly created resource. \n",
@@ -374,7 +374,7 @@
         ]
       }
     },
-    "/experiments/{id}": {
+    "/experiment/{id}": {
       "get": {
         "summary": "Retrieve experiment by ID",
         "description": "Retrieves an experiment resource by its ID\n",
@@ -512,7 +512,7 @@
         ]
       }
     },
-    "/experiments/create": {
+    "/experiment/create": {
       "post": {
         "summary": "Create an experiment",
         "description": "Create an experiment. Returns the ID of the newly created experiment resource.\n",

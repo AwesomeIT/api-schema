@@ -26,7 +26,7 @@ basePath: /v1
 produces:
   - application/json
 paths:
-  /samples:
+  /sample:
     get:
       summary: Retrieve samples
       description: |
@@ -54,7 +54,7 @@ paths:
           - participant
           - user
           - administrator
-  /samples/set:
+  /sample/set:
     post:
       summary: Retrieve a set of audio samples
       description: |
@@ -86,7 +86,7 @@ paths:
           - participant
           - user
           - administrator
-  /samples/search:
+  /sample/search:
     get:
       summary: Retrieve audio sample(s) by specified criterion.
       description: | 
@@ -125,7 +125,7 @@ paths:
           - participant
           - user
           - administrator
-  /samples/{id}:
+  /sample/{id}:
     get: 
       summary: Audio samples
       description: |
@@ -215,7 +215,7 @@ paths:
         - birdcage:
           - user
           - administrator
-  /samples/create:
+  /sample/create:
     post:
       summary: Create audio samples
       description: |
@@ -248,7 +248,7 @@ paths:
         - birdcage:
           - user
           - administrator
-  /experiments/{id}:
+  /experiment/{id}:
     get:
       summary: Retrieve experiment by ID
       description: |
@@ -340,7 +340,7 @@ paths:
           - user
           - administrator
 
-  /experiments/create:
+  /experiment/create:
     post:
       summary: Create an experiment
       description: |
