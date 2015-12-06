@@ -30,7 +30,7 @@ paths:
     get:
       summary: Retrieve samples
       description: |
-        Retrieve a list of audio sample resources. By default, a limit of 10 samples are returned.
+        Retrieve a list of audio sample resources. By default, a limit of 10 samples are returned. These will be the most recent samples created.
       parameters:
         - name: limit
           in: query
@@ -90,7 +90,7 @@ paths:
     get:
       summary: Retrieve audio sample(s) by specified criterion.
       description: | 
-        Retrieve one or many audio samples by the specified search criterion. All matching resources will be returned, in the case of no matching resources, an empty set will be returned.
+        Retrieve one or many audio samples by the specified search criterion. Only one criteria should be specified for a search. All matching resources will be returned, in the case of no matching resources, an empty set will be returned.
       parameters:
         - name: filename
           in: query
@@ -397,11 +397,9 @@ paths:
         - Scores
       responses:
         201:
-          description: An array of the IDs of created Score resources
+          description: The ID of the score recorded
           schema:
-            type: array
-            items:
-              type: string
+            type: string
         500:
           description: Unexpected error
           schema:
