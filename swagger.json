@@ -133,7 +133,7 @@
         "description": "Retrieve one or many audio samples by the specified search criterion. Only one criteria should be specified for a search. All matching resources will be returned, in the case of no matching resources, an empty set will be returned.\n",
         "parameters": [
           {
-            "name": "filename",
+            "name": "name",
             "in": "query",
             "description": "The name of the audio sample file",
             "type": "string"
@@ -244,11 +244,14 @@
             "schema": {
               "type": "object",
               "properties": {
-                "filename": {
+                "name": {
                   "type": "string"
                 },
                 "expected_score": {
                   "type": "number"
+                },
+                "file_link": {
+                  "type": "string"
                 },
                 "tags": {
                   "type": "array",
@@ -331,16 +334,21 @@
           {
             "name": "sample",
             "in": "body",
-            "description": "The filename and raw uncompressed audio snippet for desired sample",
+            "description": "The filename and AWS link for the location of the sound file",
             "schema": {
               "type": "object",
               "properties": {
-                "filename": {
+                "name": {
                   "type": "string"
                 },
-                "data": {
-                  "type": "string",
-                  "format": "file"
+                "file_link": {
+                  "type": "string"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             },
@@ -673,9 +681,13 @@
           "type": "string",
           "description": "Unique ID for each audio sample"
         },
-        "filename": {
+        "name": {
           "type": "string",
           "description": "Filename of audio sample"
+        },
+        "file_link": {
+          "type": "string",
+          "description": "AWS link to location of audio sample"
         },
         "date_added": {
           "type": "string",

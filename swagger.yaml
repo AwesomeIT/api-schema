@@ -92,7 +92,7 @@ paths:
       description: | 
         Retrieve one or many audio samples by the specified search criterion. Only one criteria should be specified for a search. All matching resources will be returned, in the case of no matching resources, an empty set will be returned.
       parameters:
-        - name: filename
+        - name: name
           in: query
           description: The name of the audio sample file
           type: string
@@ -168,10 +168,12 @@ paths:
           schema:
             type: object
             properties:
-              filename:
+              name:
                 type: string
               expected_score:
                 type: number
+              file_link:
+                type: string
               tags:
                 type: array
                 items:
@@ -223,15 +225,18 @@ paths:
       parameters: 
         - name: sample
           in: body
-          description: The filename and raw uncompressed audio snippet for desired sample
+          description: The filename and AWS link for the location of the sound file
           schema:
             type: object
             properties:
-              filename: 
+              name: 
                 type: string
-              data:
+              file_link:
                 type: string
-                format: file
+              tags:
+                type: array
+                items:
+                  type: string
           required: true
       tags: 
         - Samples
@@ -447,9 +452,12 @@ definitions:
       id: 
         type: string
         description: 'Unique ID for each audio sample'
-      filename: 
+      name: 
         type: string
         description: 'Filename of audio sample'
+      file_link:
+        type: string
+        description: 'AWS link to location of audio sample'
       date_added:
         type: string
         format: date-time
