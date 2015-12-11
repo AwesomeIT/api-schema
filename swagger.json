@@ -250,7 +250,7 @@
                 "expected_score": {
                   "type": "number"
                 },
-                "file_link": {
+                "s3_url": {
                   "type": "string"
                 },
                 "tags": {
@@ -341,7 +341,7 @@
                 "name": {
                   "type": "string"
                 },
-                "file_link": {
+                "s3_url": {
                   "type": "string"
                 },
                 "tags": {
@@ -685,7 +685,7 @@
           "type": "string",
           "description": "Filename of audio sample"
         },
-        "file_link": {
+        "s3_url": {
           "type": "string",
           "description": "AWS link to location of audio sample"
         },

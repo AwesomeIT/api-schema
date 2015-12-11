@@ -172,7 +172,7 @@ paths:
                 type: string
               expected_score:
                 type: number
-              file_link:
+              s3_url:
                 type: string
               tags:
                 type: array
@@ -231,7 +231,7 @@ paths:
             properties:
               name: 
                 type: string
-              file_link:
+              s3_url:
                 type: string
               tags:
                 type: array
@@ -455,7 +455,7 @@ definitions:
       name: 
         type: string
         description: 'Filename of audio sample'
-      file_link:
+      s3_url:
         type: string
         description: 'AWS link to location of audio sample'
       date_added:
