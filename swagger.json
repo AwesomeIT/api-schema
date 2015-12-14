@@ -248,7 +248,7 @@
                   "type": "string"
                 },
                 "expected_score": {
-                  "type": "number"
+                  "type": "integer"
                 },
                 "s3_url": {
                   "type": "string"
@@ -334,7 +334,7 @@
           {
             "name": "sample",
             "in": "body",
-            "description": "The filename and AWS link for the location of the sound file",
+            "description": "The filename, AWS link for the location of the sound file, tags, and expected score (enter -1 for no expected score)",
             "schema": {
               "type": "object",
               "properties": {
@@ -343,6 +343,9 @@
                 },
                 "s3_url": {
                   "type": "string"
+                },
+                "expected_score": {
+                  "type": "integer"
                 },
                 "tags": {
                   "type": "array",
@@ -703,7 +706,7 @@
           "description": "Average linguistic quality of audio sample"
         },
         "expected_score": {
-          "type": "number",
+          "type": "integer",
           "description": "Expected linguistic quality score of audio sample"
         },
         "tags": {
