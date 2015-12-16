@@ -48,11 +48,12 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-      security:
-        - birdcage:
-          - participant
-          - user
-          - administrator
+      authorizations: 
+        birdcage: 
+          -
+            scope: client
+          -
+            scope: administrator        
   /sample/set:
     post:
       summary: Retrieve a set of audio samples
@@ -80,11 +81,12 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-      security:
-        - birdcage:
-          - participant
-          - user
-          - administrator
+      authorizations: 
+        birdcage: 
+          -
+            scope: client
+          -
+            scope: administrator     
   # /sample/search:
   #   get:
   #     summary: Retrieve audio sample(s) by specified criterion.
@@ -146,10 +148,12 @@ paths:
           description: Unexpected error
           schema: 
             $ref: '#/definitions/Error'
-      security:
-        - birdcage:
-          - client
-          - administrator
+      authorizations: 
+        birdcage: 
+          -
+            scope: client
+          -
+            scope: administrator    
     # post:
     #   summary: Audio samples
     #   description: |
@@ -188,10 +192,12 @@ paths:
           description: Unexpected error
           schema: 
             $ref: '#/definitions/Error'
-      security:
-        - birdcage:
-          - user
-          - administrator
+      authorizations: 
+        birdcage: 
+          -
+            scope: client
+          -
+            scope: administrator   
     # delete:
     #   summary: Audio samples
     #   description: |
@@ -273,10 +279,12 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-      security:
-        - birdcage:
-          - client
-          - administrator
+      authorizations: 
+        birdcage: 
+          -
+            scope: client
+          -
+            scope: administrator   
     # post:
     #   summary: Modify an experiment by ID.
     #   description: |
@@ -406,9 +414,12 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-      security:
-        - birdcage:
-          - participant
+      authorizations: 
+        birdcage: 
+          -
+            scope: client
+          -
+            scope: administrator   
   
   /participant/register:
     post:
@@ -438,10 +449,12 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-      security:
-        - birdcage:
-          - client
-          - administrator
+      authorizations: 
+        birdcage: 
+          -
+            scope: client
+          -
+            scope: administrator   
 
 definitions:
   Sample:
