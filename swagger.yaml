@@ -260,7 +260,7 @@ paths:
         - name: id
           in: path
           description: ID of experiment resource
-          type: string
+          type: integer
           required: true
       tags: 
         - Experiments 
@@ -448,7 +448,7 @@ definitions:
     type: object
     properties:
       id: 
-        type: string
+        type: integer
         description: 'Unique ID for each audio sample'
       name: 
         type: string
@@ -479,7 +479,7 @@ definitions:
     type: object
     properties:
       id: 
-        type: string
+        type: integer
         description: 'Unique ID for each experiment'
       name: 
         type: string
@@ -507,25 +507,25 @@ definitions:
     type: object
     properties:
       participant_id: 
-        type: string
+        type: integer
         description: 'The ID of the participant'
       sample_id:
-        type: string
+        type: integer
         description: 'The ID of the sample being scored'
       experiment_id:
-        type: string
+        type: integer
         description: 'The ID of the experiment the score belongs to'
       rating:
         type: number
         format: double
-        maximum: 1
+        maximum: 10
         minimum: 0
         description: 'The rating of the sample, 1 indicating perfect English speech, 0 indicating indiscernable speech'
   Participant:
     type: object
     properties:
       id:
-        type: string
+        type: integer
         description: 'The unique ID of the participant'
       username:
         type: string
@@ -542,7 +542,7 @@ definitions:
         format: double
         description: 'The quality of the participants ratings'
   Error:
-    type: object
+    type: integer
     properties:
       id: 
         type: string
